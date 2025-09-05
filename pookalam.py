@@ -54,3 +54,34 @@ def draw_triangle_layers():
         draw_repeating_triangle_pattern(length, color, repeat_count)
         main_turtle.right(3)
 
+def draw_middle_section():
+    """Draw the middle decorative section with circles and triangles."""
+    draw_filled_circle(460, "#38b000")
+    draw_filled_circle(445, "#fefae0")
+
+    inner_patterns = [
+        (440, "#7D82B8", 36),
+        (400, "#613F75", 36),
+        (360, "#03071e", 36)
+    ]
+
+    for length, color, repeat_count in inner_patterns:
+        draw_repeating_triangle_pattern(length, color, repeat_count)
+
+def draw_sectored_layers():
+    """Draw the colorful sectored circular layers."""
+    draw_filled_circle(330, "white")
+
+    # Color gradients for each layer
+    color_palettes = [
+        ['#B22222', '#D9412C', '#FF6600', '#FF8C1A', '#FFB733', '#FFE066', '#FFF5CC'],
+        ['#D9412C', '#FF6600', '#FF8C1A', '#FFB733', '#FFE066', '#FFF5CC', '#B22222'],
+        ['#FF6600', '#FF8C1A', '#FFB733', '#FFE066', '#FFF5CC', '#B22222', '#D9412C'],
+        ['#FF8C1A', '#FFB733', '#FFE066', '#FFF5CC', '#B22222', '#D9412C', '#FF6600'],
+        ['#FFB733', '#FFE066', '#FFF5CC', '#B22222', '#D9412C', '#FF6600', '#FF8C1A']
+    ]
+
+    layer_radii = [290, 260, 230, 200, 170]
+
+    for radius, colors in zip(layer_radii, color_palettes):
+        draw_sectored_circle(radius, 28, colors)
