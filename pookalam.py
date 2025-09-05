@@ -138,3 +138,34 @@ def draw_complete_pookalam():
         diya_color="#582f0e", flame_colors=["#260701", "#ffb20f", "#ffe548"],
         flame_count=4, start_angle=0
     )
+
+# =============================================================================
+# DISPLAY FUNCTIONS
+# =============================================================================
+
+def display_festival_message():
+    """Display the festive Onam message and creator information."""
+
+    # Display main festival greeting
+    greeting_turtle = turtle.Turtle()
+    greeting_turtle.speed(0)
+    greeting_turtle.penup()
+    greeting_turtle.goto(-1250, 500)
+    greeting_turtle.pendown()
+    greeting_turtle.color("#d00000")
+    greeting_turtle.write("Happy Onam!", font=("Courier", 50, "bold italic"))
+    greeting_turtle.hideturtle()
+
+    # Display creator information
+    info_turtle = turtle.Turtle()
+    info_turtle.speed(0)
+    info_turtle.penup()
+    info_turtle.goto(700, -350)
+    info_turtle.pendown()
+    info_turtle.color("#03071e")
+    info_turtle.write("• Aaron Kurian Abraham", font=("Times New Roman", 20))
+    info_turtle.penup()
+    info_turtle.goto(700, -410)
+    info_turtle.pendown()
+    info_turtle.write("• CS5-A", font=("Times New Roman", 20))
+    info_turtle.hideturtle()
