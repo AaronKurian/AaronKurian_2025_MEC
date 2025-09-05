@@ -85,3 +85,56 @@ def draw_sectored_layers():
 
     for radius, colors in zip(layer_radii, color_palettes):
         draw_sectored_circle(radius, 28, colors)
+
+def draw_center_section():
+    """Draw the center section featuring Tux."""
+    center_colors = [
+        (140, ['#0077b6', '#023e8a']),
+        (135, ['#1a7fc0', '#0f418d']),
+        (130, ['#3387ca', '#1c4490']),
+        (125, ['#4d8fd4', '#294793']),
+        (120, ['#6697de', '#364a96']),
+        (115, ['#809fe8', '#434d99']),
+        (110, ['#99a7f2', '#50509c']),
+        (105, ['#b3affc', '#5d539f']),
+        (100, ['#ccb7ff', '#6a56a2']),
+        (95, ['#d9c1ff', '#7559a5']),
+        (90, ['#e6cbff', '#805ca8']),
+        (85, ['#f3d5ff', '#8b5fab']),
+        (80, ['#ffdfff', '#9662ae']),
+        (75, ['#ffe5ff', '#a165b1']),
+        (70, ['#ffebff', '#ac68b4']),
+        (65, ['#fff1ff', '#b76bb7']),
+        (60, ['#fff5ff', '#c26eba']),
+        (55, ['#fff7ff', '#cd71bd']),
+        (50, ['#fff9ff', '#d874c0']),
+        (45, ['#fffbff', '#e377c3']),
+        (40, ['#fffdff', '#ee7ac6']),
+        (35, ['#ffffff', '#f97dc9']),
+        (30, ['#ffffff', '#ff80cc']),
+        (25, ['#ffffff', '#ff83cf']),
+        (20, ['#ffffff', '#ff86d2']),
+        (15, ['#ffffff', '#ff89d5']),
+        (10, ['#ffffff', '#ff8cd8'])
+    ]
+
+    for radius, colors in center_colors:
+        draw_sectored_circle(radius, 8, colors)
+
+    draw_tux(scale=0.4, offset_y=-70)
+
+def draw_complete_pookalam():
+    """Main function to draw the complete pookalam design."""
+
+    draw_circular_border()
+    draw_outer_rings()
+    draw_triangle_layers()
+    draw_middle_section()
+    draw_sectored_layers()
+    draw_center_section()
+
+    draw_diyas_around_pookalam(
+        center=(0, 0), pookalam_radius=690, diya_radius=25, diya_count=8,
+        diya_color="#582f0e", flame_colors=["#260701", "#ffb20f", "#ffe548"],
+        flame_count=4, start_angle=0
+    )
