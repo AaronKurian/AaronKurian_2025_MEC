@@ -1,4 +1,4 @@
-# Pookalam Design using Python Turtle
+# Code-A-Pookalam 2025 using Python Turtle
 
 This project was created as part of **Code-A-Pookalam 2025** organized by **FOSS MEC**. It is a Python program that uses the Turtle graphics library to draw a colorful Pookalam design, a traditional floral pattern associated with the Onam festival.
 
@@ -20,13 +20,19 @@ The Pookalam is a key part of the Onam celebrations in Kerala. This project uses
 ## Video Demonstration
 
 Here is a short video showing the execution of the Pookalam design:
+  
+https://github.com/user-attachments/assets/2359ad5f-ed0f-4dcd-a623-15a32474469d
 
-https://github.com/user-attachments/assets/86213395-48b7-4a55-8a3f-94f8d0eaf3e2
+
+
 
 ## Features
 
 - A colorful floral design with multiple concentric layers and patterns.
 - Customizable color schemes and shapes for each layer.
+
+
+
 - Text rendering using Turtle's built-in font capabilities.
 - Smooth, fast drawing with Turtle's `speed(0)` function.
 - Designed to display "Happy Onam" using **Courier Bold Italic** font.
