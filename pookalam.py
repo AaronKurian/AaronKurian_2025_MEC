@@ -40,3 +40,17 @@ def draw_outer_rings():
         inner_colors=["#9d0208", "#d00000", "#6a040f"]
     )
 
+def draw_triangle_layers():
+    """Draw the layered triangular patterns."""
+    triangle_patterns = [
+        (580, "#DC2F02", 12),
+        (560, "#E85D04", 12),
+        (540, "#FAA307", 12),
+        (520, "#FFBA08", 12),
+        (500, "white", 12)
+    ]
+
+    for length, color, repeat_count in triangle_patterns:
+        draw_repeating_triangle_pattern(length, color, repeat_count)
+        main_turtle.right(3)
+
